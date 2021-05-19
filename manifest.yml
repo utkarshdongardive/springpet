@@ -1,4 +1,4 @@
 applications:
 - name: springpetexample1
   memory: 50M
-  path: target/*.jar
+  path: target/spring-petclinic-2.3.1.BUILD-SNAPSHOT.jar
