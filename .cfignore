@@ -1,8 +1,8 @@
 .build/*
 Packages/*
 .travis.yml
-.vs-code
-.mvnw/wrapper
+.vscode
+.mvn/wrapper
 docker-compose.yml
 Dockerfile
 mvnw
