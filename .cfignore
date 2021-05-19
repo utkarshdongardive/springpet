@@ -3,4 +3,6 @@ Packages/*
 .travis.yml
 docker-compose.yml
 Dockerfile
+mvnw
+mvn
 *.xcodeproj/
