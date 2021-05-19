@@ -3,6 +3,8 @@ Packages/*
 .travis.yml
 .vscode
 .mvn/wrapper
+.editorconfig
+.gitignore
 docker-compose.yml
 Dockerfile
 mvnw
