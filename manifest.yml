@@ -1,4 +1,4 @@
 applications:
-- name: springpetexample
-  memory: 768M
+- name: springpetexample1
+  memory: 50M
   path: target/*.jar
