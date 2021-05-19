@@ -1,0 +1,5 @@
+applications:
+- name:springpetexample
+  memory: 768M
+  random-route: true
+  path: target/*.jar
