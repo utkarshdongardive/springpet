@@ -8,6 +8,6 @@ Packages/*
 .gitignore
 docker-compose.yml
 Dockerfile
-mvnw
 mvnw.cmd
+mvnw
 *.xcodeproj/
