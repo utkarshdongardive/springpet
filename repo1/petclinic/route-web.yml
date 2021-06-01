@@ -1,14 +1,14 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: springpet-clinic
+  name: pet-clinic
   labels:
-    app: springpet-application
+    app: pet-application
 spec:
   path: /
   to:
     kind: Service
-    name: springpet-clinic
+    name: pet-clinic
     weight: 100
   port:
     targetPort: my-http
