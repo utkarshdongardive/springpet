@@ -9,6 +9,6 @@ spec:
   ports:
     - name: my-http
       port: 8080
-      targetPort: 8080
+      targetPort: 9090
   selector:
     app: pet-application
