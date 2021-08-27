@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yahoo
+  namespace: greetings-channel-ns
+  labels:
+    app: springpet-application
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springpet-application
+  template:
+    metadata:
+      labels:
+        app: springpet-application
+    spec:
+      containers:
+        - name: my-container
+          image: "svikram01/springpet:latest"
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+            - name: https
+              containerPort: 8080
+              protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: springpet-route
+  namespace: greetings-app-ns
+  labels:
+    app: springpet-application
+spec:
+  selector:
+    app: springpet-application
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: NodePort
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: springpet-ingress
+  namespace: greetings-app-ns
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: springpet-route
+          servicePort: 80
+        pathType: ImplementationSpecific
+status:
+  loadBalancer:
+    ingress:
+    - ip: 34.149.219.249
