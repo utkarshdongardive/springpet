@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: yahoo
-  namespace: greetings-channel-ns
+  namespace: greetings-app-ns
   labels:
     app: springpet-application
 spec:
