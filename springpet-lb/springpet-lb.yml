@@ -26,19 +26,3 @@ spec:
             - name: https
               containerPort: 8080
               protocol: TCP
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: springpet-route
-  namespace: greetings-app-ns
-  labels:
-    app: springpet-application
-spec:
-  selector:
-    app: springpet-application
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080
-  type: LoadBalancer
