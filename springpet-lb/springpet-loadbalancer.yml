@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: springpet-lb
+  namespace: greetings-app-ns
+  labels:
+    app: springpet-application
+spec:
+  selector:
+    app: springpet-application
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer
