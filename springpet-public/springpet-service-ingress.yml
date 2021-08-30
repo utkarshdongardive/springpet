@@ -3,7 +3,11 @@ kind: Ingress
 metadata:
   name: springpet-ingress
   namespace: greetings-app-ns
+  labels:
+    app: springpet-application
 spec:
+  selector:
+    app: springpet-application
   rules:
   - http:
       paths:
