@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: springpet-ingress
+  namespace: greetings-app-ns
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: springpet-np
+          servicePort: 80
+        pathType: ImplementationSpecific
